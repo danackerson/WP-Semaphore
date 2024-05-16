@@ -1,13 +1,16 @@
 version: v1.0
-name: Initial Pipeline
+name: Setup WordPress with MySQL using Docker Secrets
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu2004
 blocks:
-  - name: 'Block #1'
+  - name: Setup WordPress and MySQL
     task:
+      prologue:
+        commands:
+          - echo "Running setup script..."
       jobs:
-        - name: 'Job #1'
+        - name: Run setup script
           commands:
-            - checkout
+            - ./setup_wordpress.sh
