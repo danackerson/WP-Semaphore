@@ -13,5 +13,6 @@ blocks:
       jobs:
         - name: Run setup script
           commands:
+            - checkout
             - chmod +x ./setup_wordpress.sh
             - sh ./setup_wordpress.sh
