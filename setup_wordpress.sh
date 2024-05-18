@@ -49,4 +49,4 @@ echo "Verifying services..."
 docker service ls
 docker service ps wordpress
 
-curl -s http://localhost:30000 | grep -q 'WordPress'
+curl http://localhost:30000 | grep -q 'WordPress'
